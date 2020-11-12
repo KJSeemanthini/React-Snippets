@@ -36,17 +36,22 @@
 
 .Tile__body {
   border-spacing: 10px;
-  border-color: #567498;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   padding: 5px;
 }
 
 .Tile__subtract {
-  border-color: #ec4444;
   border-spacing: 10px;
   border-style: hidden;
   border-radius: 5px;
   background-color: rgba(243, 189, 189, 0.979);
+}
+
+.Tile__subtract disabled {
+  border-spacing: 10px;
+  border-style: hidden;
+  border-radius: 5px;
+  background-color: rgba(37, 31, 31, 0.979);
 }
 
 .Tile__subtract:hover {

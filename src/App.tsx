@@ -6,16 +6,22 @@ initializeIcons();
 
 export default function App() {
   const [counter, setCounter] = useState(0);
+  const [disabled, setdisabled] = useState(false);
   const incrementCounter = () => {
     setCounter(counter + 1);
   };
   const decrementCounter = () => {
-    setCounter(counter - 1);
+    if (counter) {
+      setCounter(counter - 1);
+    } else {
+      setdisabled(true);
+    }
   };
+
   return (
     <div className="Tile">
       <Icon
-        className="Tile__subtract"
+        className={"Tile__subtract " + (disabled ? "disabled" : "")}
         iconName="CalculatorSubtract"
         title={"Decrement Count"}
         onClick={decrementCounter}
